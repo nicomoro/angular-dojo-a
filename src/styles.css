@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+ul {
+  /* margin: 24px 0 24px 0; */
+  width: 100%;
+  height: 250px;
+  flex-grow: 1;
+  background-color: whitesmoke;
+}
+
+li:hover {
+  cursor: pointer;
+  background-color: lightgreen;
+}
