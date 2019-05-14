@@ -1,9 +1,9 @@
 <div>
-  <app-sujet></app-sujet>
-  <app-verbe #b="appVerbe"></app-verbe>
-  <app-complement></app-complement>
+  <app-sujet #s="appSujet"></app-sujet>
+  <app-verbe #v="appVerbe"></app-verbe>
+  <app-complement #c="appComplement"></app-complement>
 </div>
 <button>Generer une phrase !</button>
 <p>
-   =>
+   => {{s.selected}} {{v.selected}} {{c.selected}}
 </p>

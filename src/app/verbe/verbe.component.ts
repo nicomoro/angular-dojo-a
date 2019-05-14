@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VerbeComponent implements OnInit {
   verbes: string[];
-  selected: string = 'hahaha';
+  selected: string;
 
   constructor() {
     this.verbes = [
