@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-verbe',
@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class VerbeComponent implements OnInit {
   verbes: string[];
   selected: string;
+  @Output()
+  select: EventEmitter<any> = new EventEmitter();
 
   constructor() {
     this.verbes = [
@@ -30,6 +32,12 @@ export class VerbeComponent implements OnInit {
   setSelected(value: string) {
     this.selected = value;
     console.log(`Verbe : ${this.selected}`);
+    this.select.emit(
+      {
+        selected: this.selected,
+        index: 1
+      }
+    );
   }
 
 }

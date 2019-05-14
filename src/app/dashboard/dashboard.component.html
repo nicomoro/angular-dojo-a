@@ -1,9 +1,15 @@
 <div>
-  <app-sujet></app-sujet>
-  <app-verbe></app-verbe>
-  <app-complement></app-complement>
+  <app-list [index]="0" [words]="sujets" (select)="onSelect($event)">
+    <i>Sujet</i>
+  </app-list>
+  <app-list [index]="1" [words]="verbes" (select)="onSelect($event)">
+    Verbe
+  </app-list>
+  <app-list [index]="2" [words]="complements" (select)="onSelect($event)">
+    Complement
+  </app-list>
 </div>
 <button>Generer une phrase !</button>
 <p>
-   => {{s.selected}} {{v.selected}} {{c.selected}}
+   => {{ words.join(' ')}}
 </p>

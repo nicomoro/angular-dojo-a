@@ -9,20 +9,58 @@ import { VerbeComponent } from '../verbe/verbe.component';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  words = new Array(3);
+  complements: string[];
+  sujets: string[];
+  verbes: string[];
 
-  @ViewChild(SujetComponent)
-  s: SujetComponent;
-
-  @ViewChild(VerbeComponent)
-  v: VerbeComponent;
-
-  @ViewChild(ComplementComponent)
-  c: ComplementComponent;
-
-  constructor() { }
+  constructor() {
+    this.sujets = [
+      'Eddy',
+      'Nico',
+      'Jeremy G',
+      'Felix',
+      'Cyrpien',
+      'Martial',
+      'Gordian',
+      'Jocelyn',
+      'Jeremy C',
+      'Dylan',
+    ];
+    this.verbes = [
+      'mange',
+      'boit',
+      'fume',
+      'dort',
+      'finit',
+      'court',
+      'travaille',
+      'insulte',
+      'tend',
+      'parle'
+    ];
+    this.complements = [
+      'un pain',
+      'une chaussure',
+      'une course',
+      'copieusement',
+      'une perche',
+      'un chat',
+      'le travail',
+      'au chinois',
+      'le vent',
+      'un palmier',
+      'une voiture'
+    ];
+   }
 
   ngOnInit() {
-    // console.log(this.s, this.v, this.c);
   }
 
+  onSelect($event) {
+    const { selected } = $event;
+    const { index } = $event;
+
+    this.words[index] = selected;
+  }
 }

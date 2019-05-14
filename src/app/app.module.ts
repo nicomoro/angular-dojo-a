@@ -7,6 +7,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { SujetComponent } from './sujet/sujet.component';
 import { VerbeComponent } from './verbe/verbe.component';
 import { ComplementComponent } from './complement/complement.component';
+import { ListComponent } from './list/list.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ComplementComponent } from './complement/complement.component';
     DashboardComponent,
     SujetComponent,
     VerbeComponent,
-    ComplementComponent
+    ComplementComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
