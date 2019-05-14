@@ -30,6 +30,7 @@ export class ComplementComponent implements OnInit {
 
   setSelected(value: string) {
     this.selected = value;
+    console.log(`Complement : ${this.selected}`);
   }
 
 }

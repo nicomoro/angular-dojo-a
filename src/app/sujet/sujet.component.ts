@@ -29,6 +29,7 @@ export class SujetComponent implements OnInit {
 
   setSelected(value: string) {
     this.selected = value;
+    console.log(`Sujet : ${this.selected}`);
   }
 
 }

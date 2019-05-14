@@ -3,11 +3,12 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-verbe',
   templateUrl: './verbe.component.html',
-  styleUrls: ['./verbe.component.css']
+  styleUrls: ['./verbe.component.css'],
+  exportAs: 'appVerbe'
 })
 export class VerbeComponent implements OnInit {
   verbes: string[];
-  selected: string;
+  selected: string = 'hahaha';
 
   constructor() {
     this.verbes = [
@@ -29,6 +30,7 @@ export class VerbeComponent implements OnInit {
 
   setSelected(value: string) {
     this.selected = value;
+    console.log(`Verbe : ${this.selected}`);
   }
 
 }
