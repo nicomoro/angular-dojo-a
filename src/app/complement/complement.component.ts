@@ -4,7 +4,6 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-complement',
   templateUrl: './complement.component.html',
   styleUrls: ['./complement.component.css'],
-  exportAs: 'appComplement'
 })
 export class ComplementComponent implements OnInit {
   complements: string[];

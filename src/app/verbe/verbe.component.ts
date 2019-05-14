@@ -4,7 +4,6 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-verbe',
   templateUrl: './verbe.component.html',
   styleUrls: ['./verbe.component.css'],
-  exportAs: 'appVerbe'
 })
 export class VerbeComponent implements OnInit {
   verbes: string[];
